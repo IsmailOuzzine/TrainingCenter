@@ -12,12 +12,12 @@ public class Participation {
     private Long id;
     private Double montant;
 
-    @JsonIgnore
+    // @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "formateur_id")
     private Formateur formateur;
 
-    @JsonIgnore
+    // @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "formation_id")
     private Formation formation;

@@ -15,12 +15,12 @@ public class Inscription {
     private boolean valide;
     private Date createdAt;
 
-    @JsonIgnore
+    // @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "etudiant_id")
     private Etudiant etudiant;
 
-    @JsonIgnore
+    // @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "formation_id")
     private Formation formation;
