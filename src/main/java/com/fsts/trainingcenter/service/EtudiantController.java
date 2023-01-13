@@ -52,9 +52,9 @@ public class EtudiantController {
         repository.deleteById(id);
     }
 
-    @GetMapping("/commentaires/")
-    public Collection<Commentaire> getCommentairesByEtudiant() {
-        return commentaireRepository.findAll();
+    @GetMapping("/{id}/commentaires/")
+    public Collection<Commentaire> getCommentairesByEtudiant(@PathVariable Long id) {
+        return commentaireRepository.findAllByEtudiantId(id);
     }
 
     @GetMapping("/exportexcel")
